@@ -1,0 +1,25 @@
+
+{% if header_dict %}
+    <ul>
+        {% for key, value in header_dict.iteritems %}
+      		<h4>{{key}} : {{value}}</h4>
+   		{% endfor %}
+    </ul> 
+{% else %}
+    <p>No resource details are available.</p>
+{% endif %}
+
+</br></br></br>
+
+{% if mappings %}
+    <ul>
+        {% for section_key, section_dict in mappings.iteritems %}
+        	<h3> mappings found for section {{section_key}} <h3>
+        	{% for key,value in section_dict.iteritems %}
+      		<h4>{{key}} : {{value}}</h4>
+        	{% endfor %}
+   		{% endfor %}
+    </ul>
+{% else %}
+    <p>No mappings are available.</p>
+{% endif %}

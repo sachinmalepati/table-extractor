@@ -1,6 +1,6 @@
 from table_extractor import settings
 from collections import OrderedDict
-
+import os
 
 class WriteSettingsFile:
     """
@@ -40,7 +40,9 @@ class WriteSettingsFile:
         :return:
         """
         # Create new file
-        domain_explored_file = file(settings.FILE_PATH_DOMAIN_EXPLORED, 'w')
+        domain_explored_file = os.path.join(settings.BASE_DIR, settings.FILE_PATH_DOMAIN_EXPLORED)
+
+        domain_explored_file = file(domain_explored_file, 'w')
         # Print file heading
         self.write_file_heading(domain_explored_file)
 

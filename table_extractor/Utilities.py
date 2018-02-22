@@ -487,7 +487,8 @@ class Utilities:
         :return: set all parameters of research
         """
         # i'm in table_extractor folder so i have to go up
-        if os.path.exists(settings.FILE_PATH_DOMAIN_EXPLORED):
+
+        if os.path.exists(os.path.join(settings.BASE_DIR, settings.FILE_PATH_DOMAIN_EXPLORED)):
             from domain_explorer import domain_settings
             for name, val in domain_settings.__dict__.iteritems():
                 # read domain

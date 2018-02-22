@@ -1,3 +1,4 @@
+import os
 # coding=utf-8
 
 # This file contains some default configuration for the table_extractor. Please, be aware of customization!
@@ -75,6 +76,7 @@ COMMENT_STRUCTURE = "# Writing mapping rules is simple --> you have to fill all 
 RESOURCE_FILE = "RESOURCE_FILE"
 END_OF_FILE = "\n# END OF FILE \n"
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 NAME_OF_DOMAIN_EXPLORER_RESULT_FILE = "domain_settings.py"
 

@@ -165,7 +165,7 @@ class MapperTools:
                     # read old dictionary and replace it with new one
                     data_to_print = data_to_print + name + "=" + str(val).replace(", ", ", \n") + "\n\n\n"
         # overwrite mapping_rules.py
-        mapping_rules_file = open("table_extractor/mapping_rules.py", "w")
+        mapping_rules_file = open(os.path.join(settings.BASE_DIR, "table_extractor/mapping_rules.py"), "w")
         mapping_rules_file.write(settings.COMMENT_MAPPING_RULES + "\n\n")
         # printed_out == 0 means that the dictionary didn't exists in mapping_rules.py
         if printed_out == 0:
